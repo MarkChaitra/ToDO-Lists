@@ -34,4 +34,9 @@ function removeItem(item){
 
     loadList();
 }
+function removeAll(){
+
+    localStorage.setItem("myList", JSON.stringify([]));
+    loadList();
+}
   
