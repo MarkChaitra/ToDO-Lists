@@ -1,0 +1,72 @@
+html, body{
+    margin: 0%;
+    padding: 0%;
+    background: #2A7B9B;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0%;
+    border-radius: 5px;
+}
+.List-card-holder{
+    background-color: white;
+    width: 360px;
+    height: 500px;
+    padding: 20px;
+    margin: 10% auto 0 auto;
+    position: relative;
+}
+.List-Items{
+    height: 70%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+#user-input{
+    height: 30px;
+    width: 85%;
+    border: 1px solid black;
+}
+#Add-ToDo{
+    height: 30px;
+    width: 30px;
+    background-color: blueviolet;
+    border-style: none;
+    color: white;
+    cursor: pointer;
+}
+#user-input, #Add-ToDo{
+    margin: 20px auto;
+}
+.List-tasks{
+    width: 100%; height: auto;
+    background-color: #ececec;
+    margin: 5px auto;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.List-tasks i{
+    background-color: red;
+    position: absolute;
+    right: 0%;
+    height: 100%; 
+    aspect-ratio: 1 / 1;
+    display: flex; justify-content: center; align-items: center;
+    color: white;
+    cursor: pointer;
+}
+.List-info-clear{
+    display: flex;
+    width: 100%;
+    position: absolute; bottom: 20px;
+    align-items: center;
+}
+.List-info-clear button{
+    position: absolute; right: 40px;
+    background-color: blueviolet;
+    border-style: none;
+    color: white;
+    padding: 10px 10px;
+}

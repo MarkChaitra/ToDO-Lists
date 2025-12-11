@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>ToDO List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadList()">
+
+    <div class="List-card-holder">
+        <h2>To Do</h2>
+        <input type="text" name="user-input" id="user-input" placeholder="Add to your Todo" maxlength="24">
+        <button id="Add-ToDo" onclick="addToList(document.getElementById('user-input').value)">+</button>
+
+        <div class="List-Items">
+        </div>
+
+        <div class="List-info-clear">
+            <p class="Tasks-remaining">You have 10 tasks</p>
+            <button>Clear All</button>
+        </div>
+    </div>
+
+
+    <script src="backend.js"></script>
+</body>
+</html>
