@@ -16,7 +16,7 @@ function addToList(item) {
 
     let list = getList()
     list.push(item);
-    localStorage.setItem("myList", JSON.stringify(list));
+    localStorage.setItem("tasks", JSON.stringify(list));
 
     document.getElementById("user-input").value = "";
 
@@ -24,19 +24,46 @@ function addToList(item) {
 }
 
 function getList() {
-    return JSON.parse(localStorage.getItem("myList")) || [];
+    return JSON.parse(localStorage.getItem("tasks")) || [];
 }
 
 function removeItem(item){
     let list = getList();
     list = list.filter(items => items !== item);
-    localStorage.setItem("myList", JSON.stringify(list));
+    localStorage.setItem("tasks", JSON.stringify(list));
 
     loadList();
 }
 function removeAll(){
 
-    localStorage.setItem("myList", JSON.stringify([]));
+    localStorage.setItem("tasks", JSON.stringify([]));
     loadList();
+}
+
+
+// Test data
+function testData(){
+
+    addToList("Buy groceries");
+    addToList("Finish homework");
+    addToList("Clean desk");
+    addToList("Call mom");
+    addToList("Reply to emails");
+    addToList("Do laundry");
+    addToList("Walk the dog");
+    addToList("Read 10 pages");
+    addToList("Workout");
+    addToList("Pay phone bill");
+    addToList("Water plants");
+    addToList("Fix CSS layout");
+    addToList("Push code to git");
+    addToList("Update resume");
+    addToList("Book dentist appt");
+    addToList("Meal prep");
+    addToList("Review JS notes");
+    addToList("Backup laptop");
+    addToList("Organize files");
+    addToList("Plan weekend");
+
 }
   
