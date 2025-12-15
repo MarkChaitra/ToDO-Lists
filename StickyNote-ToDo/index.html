@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>Sticky Note Wall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadList()">
+
+    <div class="sticky-note-box">
+
+        <H2>Sticky Wall</H2>
+
+        <div class="sticky-note-holder">
+        </div>
+
+    </div>
+
+    <div class="note new-note-div">
+        <h2>Creat a new note</h2>
+        <input type="text" name="note-title" id="note-title" maxlength="20" placeholder="Title"><br>
+        <textarea name="note-text" id="note-text" cols="19" rows="7" maxlength="200" placeholder="notes content..."></textarea><br>
+        <input type="color" name="note-colour" id="note-colour" value="green">
+        <button onclick="addListItem(
+            document.getElementById('note-title').value, 
+            document.getElementById('note-text').value.split('\n'), 
+            document.getElementById('note-colour').value
+        )">Add</button>
+        <button onclick="noteMaker('hidden')">Cancel</button>
+    </div>
+
+    <script src="backend.js"></script>
+</body>
+</html>
